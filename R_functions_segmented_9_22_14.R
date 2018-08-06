@@ -250,7 +250,7 @@ Oto.Age.Model.fits<-function(spp.dat.in,oto.age.col=c(5,4,3),sextype="All",Bp.fi
     if (length(bps)==1 )
       {
       print(out.f$psi)
-      smartlegend("left","top",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps))),round(aic.vec,2),c("/ R^2=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red"),bty="n")
+      legend("topleft",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps))),round(aic.vec,2),c("/ R^2=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red"),bty="n")
       }
     if (length(bps)>1 )
     {
@@ -287,7 +287,7 @@ Oto.Age.Model.fits<-function(spp.dat.in,oto.age.col=c(5,4,3),sextype="All",Bp.fi
       aic.vec <- c(aic.1,aic.2,aic.3)
       rsq.vec <- c(rsq.1,rsq.2,rsq.3)
       if (quad.fit == "F" & add.lengths=="F"){
-      smartlegend("left","top",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps)," Bp model: AIC=",sep="")),round(aic.vec,2),c("/ R^2=","/ R^2=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red","blue"),bty="n")
+      legend("topleft",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps)," Bp model: AIC=",sep="")),round(aic.vec,2),c("/ R^2=","/ R^2=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red","blue"),bty="n")
       
       }
       if(quad.fit == "T" & add.lengths=="F"){
@@ -296,7 +296,7 @@ Oto.Age.Model.fits<-function(spp.dat.in,oto.age.col=c(5,4,3),sextype="All",Bp.fi
         rsq.4 <- summary(quad)$r.squared
         aic.vec <- c(aic.1,aic.2,aic.3,aic.4)
         rsq.vec <- c(rsq.1,rsq.2,rsq.3,rsq.4)
-        smartlegend("left","top",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps)," Bp model: AIC=",sep=""),"Quadratic model: AIC="),round(aic.vec,2),c("/ R^2=","/ R^2=","/ R^2:=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red","blue","purple"),bty="n")
+        legend("topleft",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps)," Bp model: AIC=",sep=""),"Quadratic model: AIC="),round(aic.vec,2),c("/ R^2=","/ R^2=","/ R^2:=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red","blue","purple"),bty="n")
       }
       
       if(add.lengths == "T" & quad.fit == "T"){
@@ -318,7 +318,7 @@ Oto.Age.Model.fits<-function(spp.dat.in,oto.age.col=c(5,4,3),sextype="All",Bp.fi
         }
         aic.vec<- c(aic.1,aic.2,aic.3,aic.4,aic.5,aic.6)
         rsq.vec<- c(rsq.1,rsq.2,rsq.3,rsq.4,rsq.5,rsq.6)
-        smartlegend("left","top",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps)," Bp model: AIC=",sep=""),"Quadratic model: AIC=","Zero Breakline model: AIC=","One Breakline model: AIC="),round(aic.vec,2),c("/ R^2=","/ R^2=","/ R^2=","/ R^2=","/ R^2=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red","blue","purple","orange","yellow"),bty="n")
+        legend("topleft",paste(c("0 Bp model: AIC=","1 Bp model: AIC=",paste(length(bps)," Bp model: AIC=",sep=""),"Quadratic model: AIC=","Zero Breakline model: AIC=","One Breakline model: AIC="),round(aic.vec,2),c("/ R^2=","/ R^2=","/ R^2=","/ R^2=","/ R^2=","/ R^2="),round(rsq.vec,4),sep=" "),lty=1,lwd=2,col=c("green","red","blue","purple","orange","yellow"),bty="n")
       }
     }
       if (comp.plot=="T"){
